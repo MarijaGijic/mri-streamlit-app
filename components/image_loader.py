@@ -19,7 +19,7 @@ def load_patient_images(patient_id):
     cache_file = os.path.join(cache_images_folder, f"{cache_key}.pickle")
 
     if os.path.exists(cache_file):
-        with opne(cache_file, 'rb') as f:
+        with open(cache_file, 'rb') as f:
             patient_images = pickle.load(f)
     
     else:
